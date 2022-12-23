@@ -1,7 +1,7 @@
 # Go-Postgres
 
 This project is simple CRUD application built in golang and using PostgreSQL as DB.
-This project is explained in this [tutorial].
+
 
 ## Pre-requisite
 1. Install golang v1.11 or above.
@@ -23,6 +23,6 @@ CREATE TABLE users (
 
 ## Author
 
-I am Shubham Chadokar. I am Software Engineer and work mostly on backend development.
+I am Kumar Satyam. 
 I love write the articles and tutorials on Golang, Nodejs, Blockhain.
-You can read all my articles and tutorials [here](https://schadokar.dev).  
+Here is a template you can use to connect your postgres with Golang with an API   
