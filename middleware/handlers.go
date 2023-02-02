@@ -16,7 +16,7 @@ import (
 	// package used to read the .env file
 	_ "github.com/lib/pq" // postgres golang driver
 
-	logkardo "github.com/DrifeTechnologies/drife-logging-service"
+	
 )
 
 //plug your postgres data here
