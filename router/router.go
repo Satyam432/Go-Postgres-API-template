@@ -21,20 +21,20 @@ func Router() *mux.Router {
 	router.HandleFunc("/api/newuser", middleware.CreateUser).Methods("POST", "OPTIONS")
 	router.HandleFunc("/api/user/{id}", middleware.UpdateUser).Methods("PUT", "OPTIONS")
 	router.HandleFunc("/api/deleteuser/{id}", middleware.DeleteUser).Methods("DELETE", "OPTIONS")
-	router.Use(Loggingmiddleware)
+	//router.Use(Loggingmiddleware)
 	return router
 }
 
-func Loggingmiddleware(h http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		reqbody, _ := io.ReadAll(r.Body)
-		r.Body = io.NopCloser(bytes.NewBuffer(reqbody))
-		fmt.Fprintln(w, "A message was received")
+// func Loggingmiddleware(h http.Handler) http.Handler {
+// 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+// 		reqbody, _ := io.ReadAll(r.Body)
+// 		r.Body = io.NopCloser(bytes.NewBuffer(reqbody))
+// 		fmt.Fprintln(w, "A message was received")
 
-		logkardo.Requestbodymaker(r, reqbody)
-		logkardo.Responsebodymaker(w)
+// 		logkardo.Requestbodymaker(r, reqbody)
+// 		logkardo.Responsebodymaker(w)
 
-		// do stuff before the handlers
-		h.ServeHTTP(w, r)
-	})
-}
+// 		// do stuff before the handlers
+// 		h.ServeHTTP(w, r)
+// 	})
+// }
