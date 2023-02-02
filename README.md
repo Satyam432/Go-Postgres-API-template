@@ -24,5 +24,5 @@ CREATE TABLE users (
 ## Author
 
 I am Kumar Satyam. 
-I love write the articles and tutorials on Golang, Nodejs, Blockhain.
+I love to write the articles and tutorials on Golang, Nodejs, Blockhain.
 Here is a template you can use to connect your postgres with Golang with an API   
